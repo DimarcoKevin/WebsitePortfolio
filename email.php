@@ -1,4 +1,4 @@
-<?
+<?php
 	if(isset($_POST['submit'])){
 		// gathering name, email, and message from contact form
 		$name = $_POST['name'];

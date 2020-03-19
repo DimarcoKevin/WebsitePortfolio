@@ -13,6 +13,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+		<?php include('email.php') ?>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -45,7 +46,7 @@
 							<article id="resume">
 								<h2 class="major">Kevin Dimarco</h2>
 								<h4>School:</h4>
-								<ul>
+								<ul> 
 									<li>Fanshawe College : Business</li>
 									<li>Sheridan College : Computer Programming</li>
 								</ul>	
@@ -93,7 +94,7 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form action="email.php" method="post" name="emailform">
+								<form action="https://kevindimarco.com/email.php" method="POST" name="emailform">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -138,6 +139,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script scr=assets/php/email.php></script>
 	</body>
 </html>
