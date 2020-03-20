@@ -10,7 +10,7 @@
 	  	// adding my email and header
 	  	$to = "kevin.j.dimarco@gmail.com";
 	  	$header = "From: $visitor_email";
-	  	$subject = "Email from kevindimarco.com"
+	  	$subject = "Email from kevindimarco.com";
 
 	  	// trying to running mail function
 	  	if (mail($to, $subject, $message, $header)) {
