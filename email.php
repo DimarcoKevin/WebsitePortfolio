@@ -4,7 +4,7 @@
 		$name = $_POST['name'];
 	  	$email = $_POST['email'];
 	  	$message = $_POST['message'];
-	  	$from = "contact@kevindimarco.com"; // change to cPanel email
+	  	$from = "contact@kevindimarco.com"; 
 
 
 	  	// adding my email and header
