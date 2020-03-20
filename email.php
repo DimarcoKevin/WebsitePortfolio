@@ -4,12 +4,13 @@
 		$name = $_POST['name'];
 	  	$email = $_POST['email'];
 	  	$message = $_POST['message'];
+	  	$from = "contact@kevindimarco.com"; // change to cPanel email
 
 
 	  	// adding my email and header
 	  	$to = "kevin.j.dimarco@gmail.com";
-	  	$header = "From: " . $email;
-	  	$subject = "Contact email from portfolio site";
+	  	$header = "From: " . $from;
+	  	$subject = "Contact: " . $email;
 
 	  	// trying to running mail function
 	  	if (mail($to, $subject, $message, $header)) {
