@@ -12,11 +12,15 @@
 	  	$header = "From: " . $from;
 	  	$subject = "Contact: " . $email;
 
-	  	// trying to running mail function
-	  	if (mail($to, $subject, $message, $header)) {
-	  		echo "<h4>Thanks for the email, " . $name . "! We will contact you shortly.</h4>";
-	  	} else {
-	  		echo "Something went wrong!";
-	  	}
+	  	// checking that all fields are not null
+	  	// double check this works on live version
+	  	if (isset($name, $email, $message)) {
+		  	// trying to running mail function
+		  	if (mail($to, $subject, $message, $header)) {
+		  		echo "<h4>Thanks for the email, " . $name . "! We will contact you shortly.</h4>";
+		  	} else {
+		  		echo "Something went wrong!";
+		  	}
+		}
 	}
 ?>
