@@ -16,7 +16,11 @@
 	  	if (isset($name, $email, $message)) {
 		  	// trying to running mail function
 		  	if (mail($to, $subject, $message, $header)) {
-		  		echo "<h4>Thanks for the email, " . $name . "! We will contact you shortly.</h4>";
+			 	print '<script type="text/javascript">'; 
+			    print 'alert("Thanks for the email, " . $name . "! We will contact you shortly.")'; 
+			    print '</script>';
+
+		  		//echo "<h4>Thanks for the email, " . $name . "! We will contact you shortly.</h4>";
 		  	} else {
 		  		echo "Something went wrong!";
 		  	}
