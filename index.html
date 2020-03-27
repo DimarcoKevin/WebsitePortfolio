@@ -9,6 +9,27 @@
 		<!-- Code for favicon initials -->
 		<link rel="icon" href="images/favicon.ico">
 
+		<!-- Code to display thank you message after submitting contact form -->
+		<script type="text/javascript">
+			/*$.ajax({
+			   type:"GET",
+		           url:"fun_action.php",
+			   data:{strtdt:strtdt,enddt:enddt,crg:crg},
+			   success:function(data){
+			   location.reload();
+		           document.getElementById('hidden').show();//or $("#hidden").show();
+			   }
+			}); */
+
+
+
+			$(document).ready(function() {
+				$("#submit").click(function() {
+					$("#hiddenMessage").show();
+				});
+			});
+		</script>
+
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
