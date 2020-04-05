@@ -20,7 +20,15 @@
 		           document.getElementById('hidden').show();//or $("#hidden").show();
 			   }
 			}); */
+			$.ajax({
 
+			})
+			.success(function() {
+			  $(modal).append("<div class='good'>You were subscribed</div>");
+			})
+			.fal(function() {
+			  $(modal).append("<div class='bad'>No newsletter for you!</div>");
+			});
 
 
 			$(document).ready(function() {
@@ -76,7 +84,7 @@
 								</ul>
 								<br>
 								<a href="./assets/resume/Resume.zip" download>
-									<h4>Full Resume Download</h4>
+									Full Resume Download
 								</a>
 							</article>
 
