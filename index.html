@@ -10,7 +10,19 @@
 
 		<!-- Code to display thank you message after submitting contact form -->
 		<script type="text/javascript">
-
+				function sendContact() {
+		        jQuery.ajax({
+		            url: "email.php",
+		            data:'name='+$("#name").val() +
+								'&email='+ $("#email").val() +
+								'&message='+ $("#message").val(),
+		            type: "POST",
+		            success:function(data){
+		                $("#emailStatus").html(data);
+		            },
+		            error:function (){}
+		        });
+				}
 		</script>
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -95,6 +107,7 @@
 							<article id="contact">
 								<h2 class="major">Contact</h2>
 								<form action="email.php" target="hiddenMessage" method="POST" name="emailform">
+									<div id="emailStatus"></div>
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
