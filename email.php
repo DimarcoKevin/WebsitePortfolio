@@ -5,11 +5,12 @@
 	  	$email = $_POST['email'];
 	  	$message = $_POST['message'];
 	  	$from = "contact@kevindimarco.com";
-			
+
 	  	// adding my email and header
 	  	$to = "kevin.j.dimarco@gmail.com";
-	  	$header = "From: " . $from;
-	  	$subject = "Contact: " . $email;
+			$subject = "Contact: " . $name;
+	  	$header = "From: " . $email . " Sent through: " . $from;
+
 
 	  	// checking that all fields are not null
 	  	if (isset($name, $email, $message)) {
