@@ -10,18 +10,36 @@
 
 		<!-- Code to display thank you message after submitting contact form -->
 		<script type="text/javascript">
+				function validateEmail() {
+					var valid = true;
+					if (!$("name").val()) {
+							valid = false;
+					}
+					if (!$("email").val()) { // check for email validation later
+							valid = false;
+					}
+					if (!$("message").val()) {
+							valid = false;
+					}
+					return valid;
+				}
+
 				function sendEmail() {
-		        jQuery.ajax({
-		            url: "email.php",
-		            data:'name='+$("#name").val() +
-								'&email='+ $("#email").val() +
-								'&message='+ $("#message").val(),
-		            type: "POST",
-		            success:function(data){
-		                $("#emailStatus").html(data);
-		            },
-		            error:function (){}
-		        });
+					var valid;
+					valid = validateEmail();
+					if(valid) {
+			        jQuery.ajax({
+			            url: "email.php",
+			            data:'name='+$("#name").val() +
+											'&email='+ $("#email").val() +
+											'&message='+ $("#message").val(),
+			            type: "POST",
+			            success:function(data){
+			                $("#emailStatus").html(data);
+			            },
+			            error:function (){}
+			        });
+					 }
 				}
 		</script>
 
@@ -106,7 +124,7 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form target="hiddenMessage" name="emailform">
+								<form name="emailform">
 									<div id="emailStatus"></div>
 									<div class="fields">
 										<div class="field half">
@@ -127,7 +145,7 @@
 
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" id="submit" onclick="sendEmail()"/></li>
+										<li><input type="submit" value="Send Message" id="submit" onclick="sendEmail()"/></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
