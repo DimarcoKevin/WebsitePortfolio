@@ -3,7 +3,7 @@
 		// gathering name, email, and message from contact form
 			$name = $_POST['name'];
 	  	$email = $_POST['email'];
-	  	$message = $_POST['message'] . "From: " . $from;
+	  	$message = $_POST['message'] . "\r\n\r\nFrom: " . $name;
 	  	$from = "contact@kevindimarco.com";
 
 	  	// adding my email and header
