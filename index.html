@@ -15,7 +15,7 @@
 					if (!$("name").val()) {
 							valid = false;
 					}
-					if (!$("email").val()) { // check for email validation later
+					if (!$("email").val()) {
 							valid = false;
 					}
 					if (!$("message").val()) {
@@ -28,17 +28,17 @@
 					var valid;
 					valid = validateEmail();
 					if(valid) {
-			        jQuery.ajax({
-			            url: "email.php",
-			            data:'name='+$("#name").val() +
+							jQuery.ajax({
+									url: "email.php",
+									data:'name='+$("#name").val() +
 											'&email='+ $("#email").val() +
 											'&message='+ $("#message").val(),
-			            type: "POST",
-			            success:function(data){
-			                $("#emailStatus").html(data);
-			            },
-			            error:function (){}
-			        });
+									type: "POST",
+									success:function(data){
+											$("#emailStatus").html(data);
+									},
+									error:function (){}
+							});
 					 }
 				}
 		</script>
@@ -124,7 +124,7 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form name="emailform">
+								<form action="email.php" method="POST" name="emailform">
 									<div id="emailStatus"></div>
 									<div class="fields">
 										<div class="field half">
@@ -140,12 +140,8 @@
 											<textarea name="message" id="message" rows="4" required></textarea>
 										</div>
 									</div>
-									<!-- Hidden div to display when user successfully sends an email -->
-									<div id="hiddenMessage" name="hiddenMessage">
-
-									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" id="submit" onclick="sendEmail()"/></li>
+										<li><input type="submit" value="Send Message" class="primary" id="submit" onclick="sendEmail()"/></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
