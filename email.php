@@ -1,10 +1,10 @@
 <?php
 	if ($_POST) {
 		// gathering name, email, and message from contact form
-		$name = $_POST['name'];
+			$name = $_POST['name'];
 	  	$email = $_POST['email'];
 	  	$message = $_POST['message'];
-	  	$from = "contact@kevindimarco.com"; 
+	  	$from = "contact@kevindimarco.com";
 
 
 	  	// adding my email and header
@@ -16,9 +16,9 @@
 	  	if (isset($name, $email, $message)) {
 		  	// trying to running mail function
 		  	if (mail($to, $subject, $message, $header)) {
-		  		echo "<h4>Thanks for the email, " . $name . "! We will contact you shortly.</h4>";
+		  		print "<p class='success'>Thanks for the email, " . $name . "! We will contact you shortly.</p>";
 		  	} else {
-		  		echo "Something went wrong!";
+		  		print "<p class='error'>Something went wrong!</p>";
 		  	}
 		}
 	}
