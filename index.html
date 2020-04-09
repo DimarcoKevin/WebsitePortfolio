@@ -10,37 +10,50 @@
 
 		<!-- Code to display thank you message after submitting contact form -->
 		<script type="text/javascript">
-				function validateEmail() {
-					var valid = true;
-					if (!$("name").val()) {
-							valid = false;
-					}
-					if (!$("email").val()) {
-							valid = false;
-					}
-					if (!$("message").val()) {
-							valid = false;
-					}
-					return valid;
-				}
+				$(document).ready(function()) {
 
-				function sendEmail() {
-					var valid;
-					valid = validateEmail();
-					if(valid) {
-							jQuery.ajax({
-									url: "email.php",
-									data:'name='+$("#name").val() +
-											'&email='+ $("#email").val() +
-											'&message='+ $("#message").val(),
-									type: "POST",
-									success:function(data){
-											$("#emailStatus").html(data);
-									},
-									error:function (){}
-							});
-					 }
-				}
+					// sending the email
+					function sendEmail() {
+						var valid;
+						valid = validateEmail();
+						if(valid) {
+								jQuery.ajax({
+										url: "email.php",
+										data:'name='+$("#name").val() +
+												'&email='+ $("#email").val() +
+												'&message='+ $("#message").val(),
+										type: "POST",
+										success:function(data){
+												$("#emailStatus").html("Thanks for your email! I will get back to you soon!");
+										},
+										error:function (){}
+								});
+						 }
+					}
+
+					// client side validation for email fields
+					function validateEmail() {
+						var valid = true;
+						if (!$("name").val()) {
+								$("#nameLabel").css({'color': 'red'});
+								$("#nameLabel").html("NAME: (required)");
+								valid = false;
+						}
+
+						if (!$("email").val()) {
+								$("#emailLabel").css({'color': 'red'});
+								$("#emailLabel").html("EMAIL: (required)");
+								valid = false;
+						}
+
+						if (!$("message").val()) {
+								$("#messageLabel").css({'color': 'red'});
+								$("#messageLabel").html("MESSAGE: (required)");
+								valid = false;
+						}
+						return valid;
+					}
+				});
 		</script>
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -128,15 +141,15 @@
 									<div id="emailStatus"></div>
 									<div class="fields">
 										<div class="field half">
-											<label for="name">Name</label>
+											<label id="nameLabel" for="name">Name</label>
 											<input type="text" name="name" id="name" required/>
 										</div>
 										<div class="field half">
-											<label for="email">Email</label>
+											<label id="emailLabel" for="email">Email</label>
 											<input type="text" name="email" id="email" required/>
 										</div>
 										<div class="field">
-											<label for="message">Message</label>
+											<label id="messageLabel" for="message">Message</label>
 											<textarea name="message" id="message" rows="4" required></textarea>
 										</div>
 									</div>
