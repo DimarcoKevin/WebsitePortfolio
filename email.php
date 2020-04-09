@@ -5,8 +5,7 @@
 	  	$email = $_POST['email'];
 	  	$message = $_POST['message'];
 	  	$from = "contact@kevindimarco.com";
-
-
+			
 	  	// adding my email and header
 	  	$to = "kevin.j.dimarco@gmail.com";
 	  	$header = "From: " . $from;
@@ -20,6 +19,6 @@
 		  	} else {
 		  		print "<p class='error'>Something went wrong!</p>";
 		  	}
-		}
+		 }
 	}
 ?>
