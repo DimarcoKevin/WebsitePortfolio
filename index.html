@@ -5,30 +5,18 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="http://example.com/favicon.png">
 		<!-- Code for favicon initials -->
 		<link rel="icon" href="images/favicon.ico">
 
 		<!-- Code to display thank you message after submitting contact form -->
 		<script type="text/javascript">
-			/*$.ajax({
-			   type:"GET",
-		           url:"fun_action.php",
-			   data:{strtdt:strtdt,enddt:enddt,crg:crg},
-			   success:function(data){
-			   location.reload();
-		           document.getElementById('hidden').show();//or $("#hidden").show();
-			   }
-			}); */
 			$.ajax({
 
 			})
 			.success(function() {
 			  $(modal).append("<div class='good'>You were subscribed</div>");
 			})
-			.fal(function() {
-			  $(modal).append("<div class='bad'>No newsletter for you!</div>");
-			});
+
 
 
 			$(document).ready(function() {
