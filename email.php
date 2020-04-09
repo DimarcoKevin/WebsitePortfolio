@@ -3,14 +3,13 @@
 		// gathering name, email, and message from contact form
 			$name = $_POST['name'];
 	  	$email = $_POST['email'];
-	  	$message = $_POST['message'];
+	  	$message = $_POST['message'] . "From: " . $from;
 	  	$from = "contact@kevindimarco.com";
 
 	  	// adding my email and header
 	  	$to = "kevin.j.dimarco@gmail.com";
-			$subject = "Contact: " . $name;
-	  	$header = "From: " . $email . " Sent through: " . $from;
-
+	  	$header = "From: " . $from;
+	  	$subject = "Contact: " . $email;
 
 	  	// checking that all fields are not null
 	  	if (isset($name, $email, $message)) {
