@@ -11,19 +11,20 @@
 		<!-- Code to display thank you message after submitting contact form -->
 		<script type="text/javascript">
 			$.ajax({
-
+				
 			})
 			.success(function() {
-			  $(modal).append("<div class='good'>You were subscribed</div>");
+			  $(hiddenMessage).append("<p>Email successfully sent</p>
+				<p>Thanks for the email! I will contact you shortly</p>");
 			})
 
 
 
-			$(document).ready(function() {
+		/*	$(document).ready(function() {
 				$("#submit").click(function() {
 					$("#hiddenMessage").show();
 				});
-			});
+			}); */
 		</script>
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -123,10 +124,9 @@
 										</div>
 									</div>
 									<!-- Hidden div to display when user successfully sends an email -->
-									<iframe id="hiddenMessage" name="hiddenMessage" style="display: none;">
-										<p>Email successfully sent</p>
-										<p>Thanks for the email! I will contact you shortly</p>
-									</iframe>
+									<div id="hiddenMessage" name="hiddenMessage">
+
+									</div>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" id="submit"/></li>
 										<li><input type="reset" value="Reset" /></li>
