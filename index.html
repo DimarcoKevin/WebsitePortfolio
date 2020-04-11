@@ -24,9 +24,13 @@
 												'&message='+ $("#message").val(),
 										type: "POST",
 										success:function(data){
-												$("#emailStatus").html("Thanks for your email! I will get back to you soon!");
+												$("#emailStatus").css("color:green");
+												$("#emailStatus").html("Thanks for your email! I will get back to you soon!").show();
 										},
-										error:function (){}
+										error:function (){
+											$("#emailStatus").css("color:red");
+											$("#emailStatus").html("Email error!").show();
+										}
 								});
 						 }
 					}
@@ -138,7 +142,9 @@
 							<article id="contact">
 								<h2 class="major">Contact</h2>
 								<form action="email.php" target="email.php" method="POST" name="emailform">
-									<div id="emailStatus"></div>
+									<div id="emailStatus" style="display:none;">
+											<h4>Thanks for the email! I will get back to you shortly.</h4>
+									</div>
 									<div class="fields">
 										<div class="field half">
 											<label id="nameLabel" for="name">Name</label>
