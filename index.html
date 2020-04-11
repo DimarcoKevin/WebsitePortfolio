@@ -25,14 +25,14 @@
 										type: "POST",
 										success:function(data){
 												$("#emailStatus").html("<h4>Thanks for your email! I will get back to you soon!</h4>");
-												$("#emailStatus").css("color:green");
-												$("#emailStatus").show();
+												$("#emailStatus").css({'color': 'green'});
+												$("#emailStatus").css({'display': 'block'});
 										},
-										error:function (){
+										error:function(){ /*
 											$("#emailStatus").html("<h4>Email error!</h4>");
-											$("#emailStatus").css("color:red");
-											$("#emailStatus").show();
-										}
+											$("#emailStatus").css({'color': 'red'});
+											$("#emailStatus").css({'display': 'block'});
+										*/}
 								});
 						 }
 					}
@@ -144,7 +144,7 @@
 							<article id="contact">
 								<h2 class="major">Contact</h2>
 								<form name="emailform" method="POST" > <!-- target="email.php" action="email.php" -->
-									<div id="emailStatus" style="display:none;">
+									<div id="emailStatus" style="display:none">
 											<!-- This div is hidden and will display on submission of the email form -->
 											<!--<h4>Thanks for the email! I will get back to you shortly.</h4> -->
 									</div>
