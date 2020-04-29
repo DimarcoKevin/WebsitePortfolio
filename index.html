@@ -10,56 +10,7 @@
 
 		<!-- Code to display thank you message after submitting contact form -->
 		<script type="text/javascript">
-				$(document).ready(function()) {
-
-					// sending the email
-					function sendEmail() {
-						var valid;
-						valid = validateEmail();
-						if(valid) {
-								jQuery.ajax({
-										url: "email.php",
-										data:'name='+$("#name").val() +
-												'&email='+ $("#email").val() +
-												'&message='+ $("#message").val(),
-										type: "POST",
-										success:function(data){
-												$("#emailStatus").html("<h4>Thanks for your email! I will get back to you soon!</h4>");
-												$("#emailStatus").css({'color': 'green'});
-												$("#emailStatus").css({'display': 'block'});
-										},
-										error:function(){ /*
-											$("#emailStatus").html("<h4>Email error!</h4>");
-											$("#emailStatus").css({'color': 'red'});
-											$("#emailStatus").css({'display': 'block'});
-										*/}
-								});
-						 }
-					}
-
-					// client side validation for email fields
-					function validateEmail() {
-						var valid = true;
-						if (!$("#name").val()) {
-								$("#nameLabel").css({'color': 'red'});
-								$("#nameLabel").html("NAME: (required)");
-								valid = false;
-						}
-
-						if (!$("#email").val()) {
-								$("#emailLabel").css({'color': 'red'});
-								$("#emailLabel").html("EMAIL: (required)");
-								valid = false;
-						}
-
-						if (!$("#message").val()) {
-								$("#messageLabel").css({'color': 'red'});
-								$("#messageLabel").html("MESSAGE: (required)");
-								valid = false;
-						}
-						return valid;
-					}
-				});
+				
 		</script>
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
