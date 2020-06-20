@@ -15,9 +15,9 @@
 	  	if (isset($name, $email, $message)) {
 		  	// trying to running mail function
 		  	if (mail($to, $subject, $message, $header)) {
-		  		print "<p class='success'>Thanks for the email, " . $name . "! I will contact you shortly.</p>";
+		  		print "<h2 class='success'>Thanks for the email, " . $name . "! I will contact you shortly.</h2>";
 		  	} else {
-		  		print "<p class='error'>Something went wrong!</p>";
+		  		print "<h2 class='error'>Something went wrong!</h2>";
 		  	}
 		 }
 	}
