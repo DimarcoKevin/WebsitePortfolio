@@ -729,6 +729,10 @@ input[type="radio"]+label:before {
     font-family: 'Font Awesome 5 Brands';
 }
 
+#blogIcon {
+    text-align: center;
+}
+
 
 /* Image */
 
