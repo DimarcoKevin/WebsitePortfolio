@@ -7,7 +7,7 @@
 	  	$from = "contact@kevindimarco.com";
 
 	  	// adding my email and header
-	  	$to = "kevin.j.dimarco@gmail.com";
+	  	$to = "kdblogwebsite@gmail.com";
 	  	$header = "From: " . $from;
 	  	$subject = "Contact: " . $email;
 
