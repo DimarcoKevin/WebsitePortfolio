@@ -1,15 +1,15 @@
 <?php
 	if ($_POST) {
 		// gathering name, email, and message from contact form
-			$name = $_POST['name'];
+		$name = $_POST['name'];
 	  	$email = $_POST['email'];
-	  	$message = $_POST['message'] . "\r\n\r\nFrom: " . $name;
+	  	$message = $_POST['message'] . "\r\n\r\nFrom: " . $name . "\r\n\r\n(This email came from www.kevindimarco.com emailer)";
 	  	$from = "contact@kevindimarco.com";
 
 	  	// adding my email and header
 	  	$to = "kdblogwebsite@gmail.com";
-	  	$header = "From: " . $from;
 	  	$subject = "Contact: " . $email;
+		$header = "From: " . $from;
 
 	  	// checking that all fields are not null
 	  	if (isset($name, $email, $message)) {
