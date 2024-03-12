@@ -207,15 +207,27 @@ html {
     }
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 800px) {
     html {
         font-size: 11pt;
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 710px) {
     html {
         font-size: 10pt;
+    }
+}
+
+@media screen and (max-width: 638px) {
+    html {
+        font-size: 9pt;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    html {
+        font-size: 8pt;
     }
 }
 
