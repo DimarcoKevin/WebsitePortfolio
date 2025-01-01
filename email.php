@@ -4,7 +4,13 @@
 		$name = $_POST['name'];
 	  	$email = $_POST['email'];
 	  	$message = $_POST['message'] . "\r\n\r\nFrom: " . $name . "\r\n\r\n(This email came from www.kevindimarco.com emailer)";
+		$math = $_POST['math'];
 	  	$from = "contact@kevindimarco.com";
+
+		if ($math != 16) {
+			print "<h2 class='error'>You did not answer the math question correctly!</h2>";
+			exit();
+		}
 
 	  	// adding my email and header
 	  	$to = "kdblogwebsite@gmail.com";

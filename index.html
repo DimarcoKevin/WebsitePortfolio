@@ -33,7 +33,6 @@
                     <li><a href="#resume">Resume</a></li>
                     <li><a href="#kevflix">KevFlix</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About Me</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#blog">Blog</a></li>
                 </ul>
@@ -70,7 +69,7 @@
             <article id="kevflix">
                 <h2 class="major">KevFlix</h2>
                 <ul>
-                    <li>Kevflix <a class="downloads" href="apps/Kevflix Version 0.1.zip">(<i class="fas fa-desktop"></i> Download)</a> </li>
+                    <li>Kevflix <a class="downloads" href="apps/Kevflix.zip">(<i class="fas fa-desktop"></i> Download)</a> </li>
                     <br>
                     <p style="font-style: italic">DISCLAIMER: This download link does not contain any shows/movies or any other copyright materials. 
                         This project is a simple interface to display your own media collection with some features to make it more user friendly.
@@ -126,25 +125,10 @@
                 </ul>
             </article>
 
-            <!-- About -->
-            <article id="about">
-                <h2 class="major">About Me</h2>
-                <ul>
-                    <p>In High School, I wasn't exactly sure what I wanted to do in the future. I chose to take a General Business program, so I would have a good knowledge of accounting, math, and project management. These skills would be beneficial no
-                        matter which direction my career led me. </p>
-
-                    <p>After college, I started learning Java which peaked a growing interest in software development. In my free time, I started out making small text-based applications. Realizing I was not learning at the pace I wanted to, I decided to
-                        re-enroll in school; This time for Computer Sciences. </p>
-
-                    <p>I have enjoyed learning many languages and technologies along the way. Now I know I want to pursue a lifetime career of learning and growing with software. </p>
-                </ul>
-            </article>
-
             <!-- Contact -->
             <article id="contact">
                 <h2 class="major">Contact</h2>
-                <form name="emailform">
-                    <!-- <form name="emailform" method="POST" action="email.php" target="email.php"> -->
+                <form name="emailform" method="POST" action="email.php" >
                     <div class="fields">
                         <div class="field half">
                             <label id="nameLabel" for="name">Name</label>
@@ -152,11 +136,15 @@
                         </div>
                         <div class="field half">
                             <label id="emailLabel" for="email">Email</label>
-                            <input type="text" name="email" id="email" required/>
+                            <input type="email" name="email" id="email" required/>
                         </div>
                         <div class="field">
                             <label id="messageLabel" for="message">Message</label>
                             <textarea name="message" id="message" rows="4" required></textarea>
+                        </div>
+                        <div class="field">
+                            <label id="mathLabel" for="message">Math Check: 9 + 7 = ?</label>
+                            <input name="math" id="math" required></input>
                         </div>
                     </div>
                     <ul class="actions">
@@ -184,7 +172,7 @@
 
         <!-- Footer -->
         <footer id="footer">
-            <p class="copyright">&copy; 2024 Kevin Dimarco</p>
+            <p class="copyright">&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> - Kevin Dimarco</p>
         </footer>
     </div>
 
